@@ -1,0 +1,13 @@
+---
+- job:
+    name: application-service-pipeline
+    project-type: workflow
+    dsl: |
+        node {
+          stage 'Stage Checkout'
+          git 'https://github.com/anperez78/application-service.git'
+
+          stage 'Stage Build'
+          echo "My branch is: ${env.BRANCH_NAME}"
+          sh "./gradlew clean check test oneJar"
+        }
