@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t ci-platform-jjbuilder .
+docker build --no-cache -t ci-platform-jjbuilder .
