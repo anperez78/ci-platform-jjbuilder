@@ -1,11 +1,11 @@
 ---
 - job:
-    name: application-service-pipeline
+    name: demo-service-pipeline
     project-type: pipeline
     pipeline:
       script-path: Jenkinsfile
       scm:
         - git:
-            url: "https://github.com/anperez78/application-service.git"
+            url: "https://github.com/anperez78/demo-service.git"
             branches:
               - master
